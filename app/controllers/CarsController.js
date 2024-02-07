@@ -17,7 +17,7 @@ function _drawCars() {
 
 
 export class CarsController {
-  constructor () {
+  constructor() {
     // ANCHOR page load
     console.log('Cars controller loaded');
     carsService.loadCarsFromLocalStorage()

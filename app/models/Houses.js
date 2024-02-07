@@ -15,7 +15,7 @@ export class House {
         this.dateListed = new Date()
     }
 
-    get housesCardHTMLTemplate() {
+    get HousesCardHTMLTemplate() {
         return `
         <div class="col-10">
             <div class="bg-light rounded shadow-lg d-flex">
