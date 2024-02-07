@@ -15,10 +15,21 @@ label {
   object-fit: cover;
 }
 
+.house-img {
+  width: 25%;
+  object-fit: cover;
+}
+
 
 
 @media (max-width: 767.9px) {
-  .car-img {
+  .car-img .house-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .house-img {
     width: 100%;
   }
 }
