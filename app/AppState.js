@@ -1,12 +1,29 @@
 import { Car } from './models/Car.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
+import { House } from './models/Houses.js'
 
 class ObservableAppState extends EventEmitter {
+  // /** * @type {House[]} */
+  houses = [
+    new House({
+      year: '1999',
+      bedrooms: 2,
+      bathrooms: 2,
+      sqft: 1000,
+      price: 325000,
+      description: 'Welcome to your new home!',
+      imgUrl: 'https://unsplash.com/photos/brown-and-white-concrete-house-uOYak90r4L0',
+      ownedOutright: true,
+      dateListed: new Date()
+    })
+  ]
+
+
 
 
   /** * @type {Car[]} */
-  cars = [
+  _cars = [
     // NOTE bringing cars in from local storage
     // new Car({
     //   make: 'Mazda',
@@ -42,6 +59,12 @@ class ObservableAppState extends EventEmitter {
     //   imgUrl: 'https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     // }),
   ]
+  get cars() {
+    return this._cars
+  }
+  set cars(value) {
+    this._cars = value
+  }
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
