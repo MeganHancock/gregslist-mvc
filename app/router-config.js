@@ -1,6 +1,5 @@
 import { CarsController } from "./controllers/CarsController.js";
-import { ExamplesController } from "./controllers/ExamplesController.js";
-import { HomeController } from "./controllers/HomeController.js";
+import { HousesController } from "./controllers/HousesController.js";
 import { Router } from "./utils/Router.js";
 
 
@@ -19,5 +18,13 @@ export const router = new Router([
     controllers: [CarsController],
     // NOTE filepath to our CarsView HTML file
     view: 'app/views/CarsView.html'
+  },
+
+  {
+    // NOTE if url looks like 'localhost:8080/#/cars', this route object is loaded
+    path: '#/houses',
+    controllers: [HousesController],
+    // NOTE filepath to our CarsView HTML file
+    view: 'app/views/HousesView.html'
   }
 ])
