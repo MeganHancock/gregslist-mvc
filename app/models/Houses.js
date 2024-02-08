@@ -30,7 +30,7 @@ export class House {
                     <p class="fs-4">Square Feet: ${this.sqft} ft.</p>
                     <p class="fs-4">$${this.price}</p>
                     <p class="fs-4">Description: ${this.description}</p>
-                    <p class="fs-5">This property is owned outright.</p>
+                    <p class="fs-5">${this.ownedOutright}</p>
                     <p class="fs-5">${this.dateListed}</p>
                 </div>
             </div>

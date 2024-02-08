@@ -6,6 +6,13 @@ class HousesService {
     constructor() {
         console.log('service loaded and linked')
     }
+    createHouseListing(houseFormData) {
+        const newHouseModel = new House(houseFormData)
+        console.log('pojo from brought frm controller to services', houseFormData)
+        console.log('new house', newHouseModel)
+    }
+
+
 }
 
 export const housesService = new HousesService()
