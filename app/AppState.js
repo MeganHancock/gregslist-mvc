@@ -13,7 +13,18 @@ class ObservableAppState extends EventEmitter {
       sqft: 1000,
       price: 325000,
       description: 'Welcome to your new home!',
-      imgUrl: 'https://unsplash.com/photos/brown-and-white-concrete-house-uOYak90r4L0',
+      imgUrl: 'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y290dGFnZXxlbnwwfHwwfHx8MA%3D%3D',
+      ownedOutright: true,
+      dateListed: new Date()
+    }),
+    new House({
+      year: '1980',
+      bedrooms: 1,
+      bathrooms: 1,
+      sqft: 600,
+      price: 95000,
+      description: "She's got good bones I swear.",
+      imgUrl: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y290dGFnZXxlbnwwfHwwfHx8MA%3D%3D',
       ownedOutright: true,
       dateListed: new Date()
     })

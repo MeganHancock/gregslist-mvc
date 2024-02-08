@@ -6,6 +6,49 @@
         </div>
     </section>
 
+    <form onsubmit="app.HousesController.createHouseListing()" class="col-6 mb-3 p-3 card">
+
+        <div class="mb-2">
+            <label for="houseYear">Year Built</label>
+            <input id="houseYear" name="year" type="number" required min="1600" max="2025">
+        </div>
+
+        <div class="mb-2">
+            <label for="bedrooms">Bedrooms</label>
+            <input id="houseBedrooms" name="bedrooms" type="number" required min="0" max="100">
+        </div>
+
+        <div class="mb-2">
+            <label for="bathrooms">Bathrooms</label>
+            <input id="houseBathrooms" name="bathrooms" type="number" required min="0" max="100">
+        </div>
+
+        <div class="mb-2">
+            <label for="sqft">Square Feet</label>
+            <input id="houseSqft" name="sqft" type="number" required min="0" max="100000">
+        </div>
+
+
+        <div class="mb-2">
+            <label for="price">Price</label>
+            <input id="housePrice" name="price" type="number" required min="0" max="100000000">
+        </div>
+
+        <div class="mb-2">
+            <label for="description">Description</label>
+            <input id="houseDescription" name="description" type="text" rows="10" maxlength="10000" class="w-100"
+                rows="10">
+        </div>
+
+        <div class="mb-2">
+            <label for="houseOwnedOutright">Do you own this house outright?</label>
+            <input type="checkbox" name="houseOwnedOutright" id="houseOwnedOutright" name="houseOwnedOutright" />
+        </div>
+
+        <button type="submit">SUBMIT</button>
+
+    </form>
+
     <section id="houseListings" class="row">
 
         <!-- <div class="col-10">
