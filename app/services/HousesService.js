@@ -10,6 +10,8 @@ class HousesService {
         const newHouseModel = new House(houseFormData)
         console.log('pojo from brought frm controller to services', houseFormData)
         console.log('new house', newHouseModel)
+
+        AppState.houses.push(newHouseModel)
     }
 
 

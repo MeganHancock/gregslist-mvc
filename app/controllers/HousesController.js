@@ -15,12 +15,10 @@ function _drawHouses() {
 }
 
 export class HousesController {
-
     constructor() {
-
         console.log('houses controller loaded')
         _drawHouses()
-
+        AppState.on('houses', _drawHouses)
     }
     createHouseListing() {
         try {
