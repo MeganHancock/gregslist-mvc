@@ -17,6 +17,7 @@ function _drawHouses() {
 export class HousesController {
     constructor() {
         console.log('houses controller loaded')
+        housesService.loadHousesFromLocalStorage()
         _drawHouses()
         AppState.on('houses', _drawHouses)
     }
@@ -31,6 +32,8 @@ export class HousesController {
             // NOTE to self: getFormData() is a built in function that connects the form inputs with the matching names and creates a POJO
             console.log('here is my new house form POJO', houseFormData)
 
+            houseFormData.ownedOutright = houseFormData.ownedOutright == 'on'
+
             housesService.createHouseListing(houseFormData)
             // @ts-ignore
             form.reset()
@@ -39,5 +42,13 @@ export class HousesController {
             console.log('form error')
             Pop.error(error.message)
         }
+    }
+
+    async removeHouseListing(houseId) {
+        console.log('remove listing', houseId)
+        const wantsToRemove = await Pop.confirm('Are you certain you would like to remove this house listing?')
+
+        if (!wantsToRemove) { return }
+        housesService.removeHouseListing(houseId)
     }
 }
